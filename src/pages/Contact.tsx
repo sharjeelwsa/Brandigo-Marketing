@@ -1,24 +1,46 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, MessageCircle, MapPin, Mail, Send, CheckCircle2 } from "lucide-react";
+import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
+
+const leadSchema = z.object({
+  name: z.string().trim().min(1, "Name is required").max(100),
+  phone: z.string().trim().min(5, "Phone is required").max(20),
+  business: z.string().trim().min(1, "Business type is required").max(100),
+});
 
 const Contact = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({ name: "", phone: "", business: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!form.name || !form.phone || !form.business) {
-      toast.error("Please fill all fields");
+    const parsed = leadSchema.safeParse(form);
+    if (!parsed.success) {
+      toast.error(parsed.error.issues[0].message);
       return;
     }
-    const text = `Hi Brandigo!%0A%0AName: ${form.name}%0APhone: ${form.phone}%0ABusiness Type: ${form.business}%0A%0AI'd like to book a free strategy call.`;
+    setLoading(true);
+    const { error } = await supabase.from("leads").insert({
+      name: parsed.data.name,
+      phone: parsed.data.phone,
+      business_type: parsed.data.business,
+      source: "contact_form",
+    });
+    setLoading(false);
+    if (error) {
+      toast.error("Couldn't save your details. Please try WhatsApp directly.");
+      return;
+    }
+    const text = `Hi Brandigo!%0A%0AName: ${encodeURIComponent(parsed.data.name)}%0APhone: ${encodeURIComponent(parsed.data.phone)}%0ABusiness Type: ${encodeURIComponent(parsed.data.business)}%0A%0AI'd like to book a free strategy call.`;
     window.open(`https://wa.me/918669736979?text=${text}`, "_blank");
     setSubmitted(true);
-    toast.success("Opening WhatsApp — we'll reply within 30 minutes!");
+    toast.success("Got it! Opening WhatsApp — we'll reply within 30 minutes.");
   };
 
   return (
