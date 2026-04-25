@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
+import { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 interface Props {
-  eyebrow?: string;
+  eyebrow?: ReactNode;
   title: string;
   subtitle?: string;
   align?: "left" | "center";

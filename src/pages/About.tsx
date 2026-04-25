@@ -17,14 +17,14 @@ const About = () => {
       <section className="pt-40 pb-16 container-tight">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-3xl">
           <span className="inline-block text-xs uppercase tracking-[0.25em] text-silver border border-silver/30 rounded-full px-3 py-1 mb-6">
-            About Brandigo
+            About <span className="brand-name">Brandigo</span>
           </span>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6">
             Not just an agency.<br />
             <span className="text-silver-gradient">A growth partner.</span>
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl">
-            Brandigo Marketing was built on one belief: marketing should drive real business growth — not impressions, not followers, not vanity metrics. Just leads, revenue and ROI.
+            <span className="brand-name">Brandigo Marketing</span> was built on one belief: marketing should drive real business growth — not impressions, not followers, not vanity metrics. Just leads, revenue and ROI.
           </p>
         </motion.div>
       </section>
@@ -55,15 +55,15 @@ const About = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-3 space-y-5 text-muted-foreground leading-relaxed"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-silver-bright">The story behind Brandigo</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-silver-bright">The story behind <span className="brand-name">Brandigo</span></h2>
             <p>
-              Brandigo Marketing was founded by Mohammad Sharjeel with a clear vision — bring world-class growth marketing to Vidharbha businesses, in a way that actually works for tier-2 markets.
+              <span className="brand-name">Brandigo Marketing</span> was founded by Mohammad Sharjeel with a clear vision — bring world-class growth marketing to Vidharbha businesses, in a way that actually works for tier-2 markets.
             </p>
             <p>
               Most agencies in big metros run textbook playbooks that fail in cities like Akola, Nagpur, Buldana and Amravati. Local audiences trust hoardings, autos and word of mouth as much as they trust Instagram. So we built a hybrid system — combining the precision of digital with the trust of offline.
             </p>
             <p>
-              Today Brandigo is one of Vidharbha's leading growth agencies, with deep expertise in coaching institute marketing, local businesses, and personal brands. We don't take on every client — we take on the ones we can genuinely help grow.
+              Today <span className="brand-name">Brandigo</span> is one of Vidharbha's leading growth agencies, with deep expertise in coaching institute marketing, local businesses, and personal brands. We don't take on every client — we take on the ones we can genuinely help grow.
             </p>
             <blockquote className="border-l-2 border-silver pl-5 italic text-silver-bright">
               "Marketing budgets are not expenses. They are growth investments. Our job is to make sure every rupee comes back as 3, 5, or 10."

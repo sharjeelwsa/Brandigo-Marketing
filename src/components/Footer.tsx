@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 import { Phone, MessageCircle, MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/brandigo-logo.png";
 
 const Footer = () => {
   return (
     <footer className="border-t border-border bg-jet-soft/40 mt-32">
       <div className="container-tight py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div className="space-y-4">
-          <img src={logo} alt="Brandigo Marketing" className="h-10 w-auto" />
+          <img src={logo} alt="Brandigo Marketing" className="h-14 w-auto drop-shadow-[0_4px_18px_hsl(0_0%_92%/0.15)]" />
           <p className="text-sm text-muted-foreground max-w-xs">
-            Vidharbha's leading 360° growth marketing agency. Online + Offline. Real leads. Real revenue.
+            <span className="brand-name">Brandigo Marketing</span> — Vidharbha's leading 360° growth marketing agency. Online + Offline. Real leads. Real revenue.
           </p>
           <div className="flex gap-3 pt-2">
             <a href="#" className="p-2 rounded-full border border-border hover:border-silver/50 hover:text-silver-bright transition-colors text-muted-foreground"><Instagram size={16} /></a>
@@ -62,7 +62,7 @@ const Footer = () => {
 
       <div className="border-t border-border">
         <div className="container-tight py-6 flex flex-col sm:flex-row justify-between gap-3 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} Brandigo Marketing. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} <span className="brand-name">Brandigo Marketing</span>. All rights reserved.</p>
           <p>Founded by Mohammad Sharjeel · Akola, Maharashtra</p>
         </div>
       </div>

@@ -85,7 +85,7 @@ const Auth = () => {
       >
         <div className="text-center mb-8">
           <Link to="/" className="inline-block text-xs uppercase tracking-[0.25em] text-silver border border-silver/30 rounded-full px-3 py-1 mb-4">
-            Brandigo Admin
+            <span className="brand-name">Brandigo</span> Admin
           </Link>
           <h1 className="text-3xl font-bold text-silver-bright">Lead Dashboard Access</h1>
           <p className="text-muted-foreground text-sm mt-2">Sign in to view all leads</p>
