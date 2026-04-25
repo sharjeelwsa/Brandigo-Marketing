@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="border-t border-border bg-jet-soft/40 mt-32">
       <div className="container-tight py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div className="space-y-4">
-          <img src={logo} alt="Brandigo Marketing" className="h-14 w-auto drop-shadow-[0_4px_18px_hsl(0_0%_92%/0.15)]" />
+          <img src={logo} alt="Brandigo Marketing" className="h-20 w-auto drop-shadow-[0_4px_22px_hsl(0_0%_92%/0.18)]" />
           <p className="text-sm text-muted-foreground max-w-xs">
             <span className="brand-name">Brandigo Marketing</span> — Vidharbha's leading 360° growth marketing agency. Online + Offline. Real leads. Real revenue.
           </p>
