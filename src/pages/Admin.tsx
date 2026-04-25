@@ -9,7 +9,7 @@ import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { InviteAdminDialog } from "@/components/admin/InviteAdminDialog";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/brandigo-logo.png";
 
 interface Lead {
   id: string;
@@ -114,7 +114,7 @@ const Admin = () => {
       <header className="border-b border-border sticky top-0 z-30 bg-jet/90 backdrop-blur-xl">
         <div className="container-tight h-20 flex items-center justify-between gap-4">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logo} alt="Brandigo" className="h-8 w-auto" />
+            <img src={logo} alt="Brandigo Marketing" className="h-12 w-auto drop-shadow-[0_4px_18px_hsl(0_0%_92%/0.15)]" />
             <Badge variant="outline" className="hidden sm:inline-flex">Admin</Badge>
           </Link>
           <div className="flex items-center gap-2">

@@ -211,7 +211,7 @@ const Index = () => {
       {/* WHY CHOOSE */}
       <section className="container-tight py-24 md:py-32">
         <SectionHeading
-          eyebrow="Why Brandigo"
+          eyebrow={<>Why <span className="brand-name">Brandigo</span></> as unknown as string}
           title="Built for Real Business Growth"
           subtitle="We're not a flashy agency. We're a growth partner obsessed with leads, revenue and ROI."
         />
