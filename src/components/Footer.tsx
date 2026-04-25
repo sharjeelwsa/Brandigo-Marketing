@@ -1,15 +1,18 @@
 import { Link } from "react-router-dom";
 import { Phone, MessageCircle, MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
-import logo from "@/assets/brandigo-logo.png";
 
 const Footer = () => {
   return (
     <footer className="border-t border-border bg-jet-soft/40 mt-32">
       <div className="container-tight py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
         <div className="space-y-4">
-          <img src={logo} alt="Brandigo Marketing" className="h-20 w-auto drop-shadow-[0_4px_22px_hsl(0_0%_92%/0.18)]" />
+          <Link to="/" className="inline-block leading-none">
+            <span className="brand-name block text-3xl md:text-4xl tracking-tight">
+              Brandigo Marketing
+            </span>
+          </Link>
           <p className="text-sm text-muted-foreground max-w-xs">
-            <span className="brand-name">Brandigo Marketing</span> — Vidharbha's leading 360° growth marketing agency. Online + Offline. Real leads. Real revenue.
+            Vidharbha's leading 360° growth marketing agency. Online + Offline. Real leads. Real revenue.
           </p>
           <div className="flex gap-3 pt-2">
             <a href="#" className="p-2 rounded-full border border-border hover:border-silver/50 hover:text-silver-bright transition-colors text-muted-foreground"><Instagram size={16} /></a>

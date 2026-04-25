@@ -3,7 +3,6 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/brandigo-logo.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -34,13 +33,15 @@ const Navbar = () => {
         scrolled ? "bg-jet/80 backdrop-blur-xl border-b border-border/50" : "bg-transparent"
       )}
     >
-      <div className="container-tight flex h-28 items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group" aria-label="Brandigo Marketing — Home">
-          <img
-            src={logo}
-            alt="Brandigo Marketing"
-            className="h-20 md:h-24 w-auto transition-transform duration-500 group-hover:scale-105 drop-shadow-[0_4px_22px_hsl(0_0%_92%/0.18)]"
-          />
+      <div className="container-tight flex h-24 items-center justify-between">
+        <Link
+          to="/"
+          className="group leading-none"
+          aria-label="Brandigo Marketing — Home"
+        >
+          <span className="brand-name block text-3xl md:text-4xl tracking-tight transition-transform duration-500 group-hover:scale-[1.03] origin-left">
+            Brandigo<span className="hidden sm:inline"> Marketing</span>
+          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
