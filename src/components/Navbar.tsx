@@ -34,12 +34,12 @@ const Navbar = () => {
         scrolled ? "bg-jet/80 backdrop-blur-xl border-b border-border/50" : "bg-transparent"
       )}
     >
-      <div className="container-tight flex h-24 items-center justify-between">
+      <div className="container-tight flex h-28 items-center justify-between">
         <Link to="/" className="flex items-center gap-2 group" aria-label="Brandigo Marketing — Home">
           <img
             src={logo}
             alt="Brandigo Marketing"
-            className="h-14 md:h-16 w-auto transition-transform duration-500 group-hover:scale-105 drop-shadow-[0_4px_18px_hsl(0_0%_92%/0.15)]"
+            className="h-20 md:h-24 w-auto transition-transform duration-500 group-hover:scale-105 drop-shadow-[0_4px_22px_hsl(0_0%_92%/0.18)]"
           />
         </Link>
 
