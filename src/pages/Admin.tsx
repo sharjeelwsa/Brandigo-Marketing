@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
+import { InviteAdminDialog } from "@/components/admin/InviteAdminDialog";
 import logo from "@/assets/logo.png";
 
 interface Lead {
