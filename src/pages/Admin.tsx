@@ -161,6 +161,7 @@ const Admin = () => {
             />
           </div>
           <Button onClick={fetchLeads} variant="outline" size="lg"><RefreshCw size={16} /> Refresh</Button>
+          <InviteAdminDialog />
           <Button onClick={exportCSV} variant="hero" size="lg" disabled={filtered.length === 0}>
             <Download size={16} /> Export CSV
           </Button>
