@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
+import { InviteAdminDialog } from "@/components/admin/InviteAdminDialog";
 import logo from "@/assets/logo.png";
 
 interface Lead {
@@ -160,6 +161,7 @@ const Admin = () => {
             />
           </div>
           <Button onClick={fetchLeads} variant="outline" size="lg"><RefreshCw size={16} /> Refresh</Button>
+          <InviteAdminDialog />
           <Button onClick={exportCSV} variant="hero" size="lg" disabled={filtered.length === 0}>
             <Download size={16} /> Export CSV
           </Button>
