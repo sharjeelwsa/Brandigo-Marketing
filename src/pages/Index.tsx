@@ -7,12 +7,7 @@ import CTASection from "@/components/CTASection";
 import heroBg from "@/assets/hero-bg.jpg";
 import coachingImg from "@/assets/coaching.jpg";
 
-const stats = [
-  { value: "120+", label: "Brands grown" },
-  { value: "25Cr+", label: "Ad revenue managed" },
-  { value: "3.2x", label: "Avg. ROAS delivered" },
-  { value: "4", label: "Cities, full coverage" },
-];
+
 
 const services = [
   { icon: Globe, title: "Meta & Google Ads", desc: "Performance ad campaigns built to generate qualified leads at the lowest possible cost.", tag: "Digital" },
@@ -76,20 +71,7 @@ const Index = () => {
             </div>
           </motion.div>
 
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-px bg-border/50 rounded-2xl overflow-hidden border border-border/60"
-          >
-            {stats.map((s) => (
-              <div key={s.label} className="bg-jet-soft/80 backdrop-blur p-6 md:p-8">
-                <div className="text-3xl md:text-4xl font-bold text-silver-gradient mb-1">{s.value}</div>
-                <div className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider">{s.label}</div>
-              </div>
-            ))}
-          </motion.div>
+
         </div>
       </section>
 
