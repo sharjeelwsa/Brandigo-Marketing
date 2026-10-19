@@ -26,21 +26,27 @@ const Contact = () => {
       return;
     }
     setLoading(true);
+
+    const text = `Hi Brandigo!%0A%0AName: ${encodeURIComponent(parsed.data.name)}%0APhone: ${encodeURIComponent(parsed.data.phone)}%0ABusiness Type: ${encodeURIComponent(parsed.data.business)}%0A%0AI'd like to book a free strategy call.`;
+    const whatsappUrl = `https://wa.me/918669736979?text=${text}`;
+
     const { error } = await supabase.from("leads").insert({
       name: parsed.data.name,
       phone: parsed.data.phone,
       business_type: parsed.data.business,
       source: "contact_form",
-    });
+    }).catch(err => ({ error: err }));
     setLoading(false);
-    if (error) {
-      toast.error("Couldn't save your details. Please try WhatsApp directly.");
-      return;
-    }
-    const text = `Hi Brandigo!%0A%0AName: ${encodeURIComponent(parsed.data.name)}%0APhone: ${encodeURIComponent(parsed.data.phone)}%0ABusiness Type: ${encodeURIComponent(parsed.data.business)}%0A%0AI'd like to book a free strategy call.`;
-    window.open(`https://wa.me/918669736979?text=${text}`, "_blank");
+
+    window.open(whatsappUrl, "_blank");
     setSubmitted(true);
-    toast.success("Got it! Opening WhatsApp — we'll reply within 30 minutes.");
+
+    if (error) {
+      console.error("Supabase lead insert failed:", error);
+      toast.info("Opening WhatsApp — your message is ready to send!");
+    } else {
+      toast.success("Got it! Opening WhatsApp — we'll reply within 30 minutes.");
+    }
   };
 
   return (

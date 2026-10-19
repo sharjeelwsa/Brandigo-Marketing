@@ -3,6 +3,7 @@ import { Target, Heart, Compass, Award } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
 import founderImg from "@/assets/founder.jpg";
+import mdImg from "@/assets/syed-huzef.jpg.jpeg";
 
 const values = [
   { icon: Target, title: "Results obsessed", desc: "If it doesn't move leads, revenue or ROI — we don't do it." },
@@ -69,6 +70,55 @@ const About = () => {
               "Marketing budgets are not expenses. They are growth investments. Our job is to make sure every rupee comes back as 3, 5, or 10."
               <footer className="text-sm text-muted-foreground not-italic mt-2">— Mohammad Sharjeel, Founder</footer>
             </blockquote>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Managing Director */}
+      <section className="container-tight py-20">
+        <div className="max-w-3xl mx-auto space-y-8">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="relative rounded-3xl overflow-hidden silver-border">
+              <img src={mdImg} alt="Syed Huzef - Managing Director of Brandigo Marketing" className="w-full h-auto" loading="lazy" width={1024} height={1024} />
+              <div className="absolute inset-0 bg-gradient-to-t from-jet via-transparent to-transparent" />
+              <div className="absolute bottom-0 inset-x-0 p-6">
+                <div className="text-xs uppercase tracking-widest text-silver mb-1">Managing Director</div>
+                <div className="text-2xl font-bold text-silver-bright">Syed Huzef</div>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="space-y-5 text-muted-foreground leading-relaxed"
+          >
+            <span className="inline-block text-xs uppercase tracking-[0.25em] text-silver border border-silver/30 rounded-full px-3 py-1">
+              Leadership
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-silver-bright">Syed Huzef</h2>
+            <div className="text-lg font-medium text-silver">Managing Director</div>
+            <p className="text-lg text-silver-bright italic">
+              A Strategic Mind. A Creative Vision. A Leader in Action.
+            </p>
+            <p>
+              As Managing Director at <span className="brand-name">Brandigo</span>, he brings together strategic thinking, creative problem solving, and strong leadership to drive business growth and deliver impactful marketing solutions.
+            </p>
+            <p>
+              With a keen understanding of marketing strategy and brand development, he leads the team with clarity, purpose, and a results-oriented mindset. His ability to transform ideas into actionable strategies, inspire creative thinking, and coordinate teams effectively helps <span className="brand-name">Brandigo</span> deliver meaningful value to its clients.
+            </p>
+            <p>
+              He believes that great leadership goes beyond managing people — it means empowering individuals, encouraging innovation, and building a team that works towards a shared vision.
+            </p>
+            <p>
+              At <span className="brand-name">Brandigo</span>, he is committed to building strong brands, creating new opportunities, and turning ambitious business goals into measurable results.
+            </p>
           </motion.div>
         </div>
       </section>
